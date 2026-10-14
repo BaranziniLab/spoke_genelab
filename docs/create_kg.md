@@ -36,13 +36,13 @@ mamba env create -f environment.yml
 
 KG version number
 
-`KG_VERSION=v0.1.0`
+`KG_VERSION=v0.3.1`
 
 Path to the cloned git repository
 
 `KG_GIT=/Users/.../spoke_genelab/`
 
-Path to the Neo4J instance in Neo4j Desktop (in quotes). Make sure to enclose the path in quotes.
+Path to the Neo4j instance in Neo4j Desktop. Make sure to enclose the path in quotes.
 
 `NEO4J_INSTALL_PATH="/Users/.../Library/Application Support/Neo4j Desktop/Application/relate-data/dbmss/dbms-3d4b95d1-0219-480b-a3c4-ee5a409cc383"`
 
@@ -50,13 +50,17 @@ BioPortal API Key
 
 `BIOPORTAL_API_KEY=<bioportal api key>`
 
+Java memory settings for the Neo4j bulk import (adjust to your machine)
+
+`NEO4J_ADMIN_JAVA_OPTS="-Xms16g -Xmx20g -XX:+UseG1GC"`
+
 ------
 
 ### Download and Process Datasets and upload to Neo4J Graph Database
 
 1. Start the spoke-genelab Graph DBMS
 
-![](docs/start_dbms.png)
+![](start_dbms.png)
 
 2. Activate the conda environment
 
@@ -81,25 +85,25 @@ jupyter lab
 | 5_import_to_neo4j.ipynb    | Imports the formatted data into a Neo4j KG |
 | 6_query_examples.ipynb     | Runs example queries (optional) |
 
-5. When the import is completed, click the `Refresh` button in Neo4j Desktop. The newly created database `spoke-genelab-v0.1.0` will be listed.
+5. When the import is completed, click the `Refresh` button in Neo4j Desktop. The newly created database `spoke-genelab-v0.3.1` will be listed.
 
-![](docs/db_imported.png)
+![](db_imported.png)
 
 6. Click the `Open` button to launch the database.
 
-![](docs/open_dbms.png)
+![](open_dbms.png)
 
 7. Click on the database icon on the left.
 
-![](docs/select_db_icon.png)
+![](select_db_icon.png)
 
-8. Use the pull-down menu to select a version of `spoke-genelab-v0.1.0` database. Wait for about 30+ seconds until the database is loaded and the nodes are listed as shown below.
+8. Use the pull-down menu to select a version of `spoke-genelab-v0.3.1` database. Wait for about 30+ seconds until the database is loaded and the nodes are listed as shown below.
    
-![](docs/db_ready.png)
+![](db_ready.png)
 
 9. Set the Graph Stylesheet
 
-Drag the file kg/v0.1.0/style.grass onto the Neo4j Browser window to set the node colors, sizes, and labels.
+Drag the file kg/v0.3.1/style.grass onto the Neo4j Browser window to set the node colors, sizes, and labels.
 
 10. Now you are ready to run Cypher queries on the selected database.
 
@@ -114,12 +118,12 @@ To stop the conda environment, type
 ### Dump Neo4J Graph Database
 1. Stop the database
 
-2. Hover the cursor over the `spoke-genelab-v0.1.0` database and select `Dump` from the menu.
+2. Hover the cursor over the `spoke-genelab-v0.3.1` database and select `Dump` from the menu.
 
-![](docs/dump_db.png)
+![](dump_db.png)
 
-3. When the dump is complete, click the `Reveal files in Finder` button to open the directory that contains the `spoke-genelab-v0.1.0.dump` file.
+3. When the dump is complete, click the `Reveal files in Finder` button to open the directory that contains the `spoke-genelab-v0.3.1.dump` file.
 
-![](docs/dump_location.png)
+![](dump_location.png)
 
 This database dump will be used to create the SPOKE-GeneLab composite database.
