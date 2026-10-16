@@ -1,6 +1,6 @@
 # NASA SPOKE-GeneLab Knowledge Graph
 
-This repository contains the code and metadata needed to build a **Knowledge Graph (KG)** for [NASA GeneLab](https://www.nasa.gov/osdr-genelab-about/) omics datasets hosted on the [Open Science Data Repository (OSDR)](https://osdr.nasa.gov/bio/repo/search?q=&data_source=cgene,alsda&data_type=study).
+This repository contains the code and metadata needed to build a **Knowledge Graph (KG)** for [NASA GeneLab](https://science.nasa.gov/biological-physical/data/osdr/) omics datasets hosted on the [Open Science Data Repository (OSDR)](https://osdr.nasa.gov/bio/repo/).
 
 ---
 
@@ -239,5 +239,5 @@ CA Nelson, PW Rose, K Soman, LM Sanders, SG Gebre, SV Costes, SE Baranzini, Nasa
 ------
 
 ## 💰 Funding
-NSF Award number [2333819](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2333819), Proto-OKN Theme 1: Connecting Biomedical information on Earth and in Space via the SPOKE knowledge graph.
+NSF Award number [2333819](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2333819), Proto-OKN Theme 1: Connecting Biomedical information on Earth and in Space via the SPOKE knowledge graph.
 
