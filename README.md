@@ -1,6 +1,6 @@
 # NASA SPOKE-GeneLab Knowledge Graph
 
-This repository contains the code and metadata needed to build a **Knowledge Graph (KG)** for [NASA GeneLab](https://www.nasa.gov/osdr-genelab-about/) omics datasets hosted on the [Open Science Data Repository (OSDR)](https://osdr.nasa.gov/bio/repo/search?q=&data_source=cgene,alsda&data_type=study).
+This repository contains the code and metadata needed to build a **Knowledge Graph (KG)** for [NASA GeneLab](https://science.nasa.gov/biological-physical/data/osdr/) omics datasets hosted on the [Open Science Data Repository (OSDR)](https://osdr.nasa.gov/bio/repo/).
 
 ---
 
@@ -216,7 +216,7 @@ In Claude Desktop, add the following to the claude_desktop_config.json file to c
 
 ## ⚙️ Create spoke-genelab Knowledge Graph (for developers)
 
-[Create KG](https://github.com/BaranziniLab/spoke_genelab/blob/main/docs/create_kg.png)
+[Create KG](https://github.com/BaranziniLab/spoke_genelab/blob/main/docs/create_kg.md)
 
 ------
 
@@ -225,7 +225,7 @@ In Claude Desktop, add the following to the claude_desktop_config.json file to c
 ![](https://github.com/BaranziniLab/spoke_genelab/blob/main/docs/spoke-genelab-v0.3.0-composite.png)
 
 **Figure**: Integration of the SPOKE and GeneLab knowledge graphs using proxy nodes.  
-The **GeneLab** graph (right), a knowledge graph representing spaceflight omics datasets, depicts key experimental entities: `Assay`, `Study`, `Mission`, `MGene`, and `MethylationRegion`, along with their relationships. 
+The **GeneLab** graph (right), a knowledge graph representing spaceflight omics datasets, depicts key experimental entities: `Assay`, `Study`, `Mission`, `MGene`, `MethylationRegion`, and `Organism`, along with their relationships. 
 **Proxy nodes** (gray) represent external identifiers (ENTREZ, UBERON, CL) and enable linkage to the **[SPOKE](https://spoke.ucsf.edu/)** graph (left), a rich biomedical knowledge graph comprising biological processes, molecular functions, diseases, compounds, and more. The dashed lines indicate mappings to enable the construction of a [composite Neo4j graph database](https://neo4j.com/docs/operations-manual/current/tutorial/tutorial-composite-database/). The composite graph enables federated queries across multiple KGs.
 
 --------
@@ -239,5 +239,5 @@ CA Nelson, PW Rose, K Soman, LM Sanders, SG Gebre, SV Costes, SE Baranzini, Nasa
 ------
 
 ## 💰 Funding
-NSF Award number [2333819](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2333819), Proto-OKN Theme 1: Connecting Biomedical information on Earth and in Space via the SPOKE knowledge graph.
+NSF Award number [2333819](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2333819), Proto-OKN Theme 1: Connecting Biomedical information on Earth and in Space via the SPOKE knowledge graph.
 

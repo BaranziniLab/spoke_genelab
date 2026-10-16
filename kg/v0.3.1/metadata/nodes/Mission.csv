@@ -1,6 +1,6 @@
 property,type,description,example
 identifier,string,Identifier for mission,SpaceX-4
-name,string,Name of the study,SpaceX-4
+name,string,Name of the mission,SpaceX-4
 flight_program,string,Type of flight program,International Space Station (ISS)
 space_program,string,Sponsor of the mission,NASA
 start_date,date,Start date of mission,2014-09-21

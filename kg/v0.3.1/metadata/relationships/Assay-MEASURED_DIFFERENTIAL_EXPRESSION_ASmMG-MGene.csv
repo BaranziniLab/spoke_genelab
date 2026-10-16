@@ -1,5 +1,5 @@
 property,type,description,example
-from,string,Unique assay identifier combining GeneLab dataset accession and MD5 hash of metadata (links assay to dataset and ensures version integrity),GLDS-401-ec55d3e698d289f2afd663725127
+from,string,Unique assay identifier combining GeneLab dataset accession and MD5 hash of metadata (links assay to dataset and ensures version integrity),OSD-401-ec55d3e698d289f2afd663725127
 to,string,Gene ENTREZID,14679
 log2fc,float,"Log2-transformed fold change in gene expression between the experimental condition and its reference baseline. Positive values indicate up-regulation (higher transcript abundance), while negative values denote down-regulation (lower transcript abundance) relative to the control.",-0.145485596
 adj_p_value,float,"Multiple testing-corrected p-value assessing the statistical significance of each gene's differential expression after controlling the false-discovery rate (FDR). Smaller values (e.g., <= 0.05) indicate that the observed log2 fold change is unlikely to arise by chance, even after accounting for the large number of simultaneous tests performed in the experiment.",0.016441347

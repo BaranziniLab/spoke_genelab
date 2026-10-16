@@ -1,3 +1,3 @@
 property,type,description,example
-from,string,Unique assay identifier combining GeneLab dataset accession and MD5 hash of metadata (links assay to dataset and ensures version integrity),GLDS-401-ec55d3e698d289f2afd663725127
+from,string,Unique assay identifier combining GeneLab dataset accession and MD5 hash of metadata (links assay to dataset and ensures version integrity),OSD-401-ec55d3e698d289f2afd663725127
 to,string,UBERON Ontology ID,UBERON:0001377

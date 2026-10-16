@@ -1,5 +1,5 @@
 property,type,description,example
-from,string,Unique assay identifier combining GeneLab dataset accession and MD5 hash of metadata (links assay to dataset and ensures version integrity),GLDS-401-ec55d3e698d289f2afd663725127
+from,string,Unique assay identifier combining GeneLab dataset accession and MD5 hash of metadata (links assay to dataset and ensures version integrity),OSD-401-ec55d3e698d289f2afd663725127
 to,string,Identifier for base pair range,1:155433001-155434000
 methylation_diff,float,Percent change in methylation in base pair range,-3.542
 q_value,float,Adjusted p-value to control for false discovery rate,0.0463

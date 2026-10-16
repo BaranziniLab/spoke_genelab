@@ -1,3 +1,3 @@
 property,type,description,example
 from,string,NASA Open Science Data Repository ID,OSD-47
-to,string,GeneLab Data System GLDS-ID-MD5_hashcode(factors and materials),xxx
+to,string,Unique assay identifier combining GeneLab dataset accession and MD5 hash of metadata (links assay to dataset and ensures version integrity),OSD-401-ec55d3e698d289f2afd663725127
