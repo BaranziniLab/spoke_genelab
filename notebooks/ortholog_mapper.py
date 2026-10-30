@@ -447,8 +447,10 @@ def get_hgnc_mappings(ortholog_dbs):
         "human_entrez_gene",
         "support",
     ]
+    # HGNC moved its downloads from ftp.ebi.ac.uk to Google Cloud Storage
+    # see: https://www.genenames.org/download/statistics-and-files/
     df = pd.read_csv(
-        "https://ftp.ebi.ac.uk/pub/databases/genenames/hcop/human_all_hcop_sixteen_column.txt.gz",
+        "https://storage.googleapis.com/public-download-files/hcop/human_all_hcop_sixteen_column.txt.gz",
         dtype=str,
         usecols=columns,
         sep="\t",
