@@ -160,15 +160,17 @@ def get_info():
     )
 
     # Assign taxonomy id
+    MESH_TO_TAXID = {"D064307": "13613"}  # MeSH "Microbiota" -> NCBI taxon 13613 (OSD-267)
+
+    def _taxid_from_accession(s):
+        m = re.search(r"NCBITAXON/(\d+)$", s, flags=re.I)
+        if m:
+            return m.group(1)
+        return MESH_TO_TAXID.get(s.rsplit("/", 1)[-1], "")
+
     metadata["taxonomy"] = metadata[
         "study.characteristics.organism.term accession number"
-    ].apply(
-        lambda s: (
-            s.split("/")[-1]
-            if s.startswith("http://purl.bioontology.org/ontology/NCBITAXON/")
-            else ""
-        )
-    )
+    ].apply(_taxid_from_accession)
 
     # Complete URL
     metadata["url"] = "https://osdr.nasa.gov" + metadata["url"]
