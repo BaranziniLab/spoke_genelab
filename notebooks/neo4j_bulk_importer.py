@@ -163,7 +163,7 @@ def drop_database(verbose=False):
     NEO4J_DATABASE_QUOTED = f"`{NEO4J_DATABASE}`"
 
     cypher_shell = quote_path(os.path.join(NEO4J_BIN, "cypher-shell"))
-    command = f"{cypher_shell} -d system -u {NEO4J_USERNAME} -p {NEO4J_PASSWORD} 'DROP DATABASE {NEO4J_DATABASE_QUOTED} IF EXISTS;'"
+    command = f"{cypher_shell} -d system -u {NEO4J_USERNAME} -p {NEO4J_PASSWORD} 'DROP DATABASE {NEO4J_DATABASE_QUOTED} IF EXISTS WAIT;'"
     if verbose:
         print(f"drop_database: {command}", flush=True)
 
@@ -224,7 +224,7 @@ def create_database(verbose=False):
 
     # compose the cypher shell command
     cypher_shell = quote_path(os.path.join(NEO4J_BIN, "cypher-shell"))
-    command = f"{cypher_shell} -d system -u {NEO4J_USERNAME} -p {NEO4J_PASSWORD} 'CREATE OR REPLACE DATABASE {NEO4J_DATABASE_QUOTED};'"
+    command = f"{cypher_shell} -d system -u {NEO4J_USERNAME} -p {NEO4J_PASSWORD} 'CREATE OR REPLACE DATABASE {NEO4J_DATABASE_QUOTED} WAIT;'"
     if verbose:
         print(f"create_database: {command}", flush=True)
 
