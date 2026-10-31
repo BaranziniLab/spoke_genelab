@@ -50,10 +50,6 @@ BioPortal API Key
 
 `BIOPORTAL_API_KEY=<bioportal api key>`
 
-Java memory settings for the Neo4j bulk import (adjust to your machine)
-
-`NEO4J_ADMIN_JAVA_OPTS="-Xms16g -Xmx20g -XX:+UseG1GC"`
-
 ------
 
 ### Download and Process Datasets and upload to Neo4J Graph Database
