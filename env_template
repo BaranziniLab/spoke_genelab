@@ -7,7 +7,6 @@ KG_VERSION=v0.3.1
 KG_GIT=<absolute path to spoke_genelab repo>
 # Path to the Neo4J instance in Neo4j Desktop
 NEO4J_INSTALL_PATH="<path to Neo4j instance>"
-NEO4J_ADMIN_JAVA_OPTS="-Xms16g -Xmx20g -XX:+UseG1GC"
 #
 # API for BioPortal
 BIOPORTAL_API_KEY=<bioportal api key>
