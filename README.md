@@ -204,7 +204,7 @@ In Claude Desktop, add the following to the claude_desktop_config.json file to c
     "NEO4J_URI": "bolt://localhost:7687",
     "NEO4J_USERNAME": "neo4j",
     "NEO4J_PASSWORD": "neo4jdemo",
-    "NEO4J_DATABASE": "spoke-genelab-v0.3.1",
+    "NEO4J_DATABASE": "spoke-genelab-v0.3.1-20261112",
     "INSTRUCTIONS": "Query the GeneLab KG to identify NASA spaceflight experiments containing omics datasets, specifically differential gene expression (transcriptomics), DNA methylation (epigenomics) and Amplicon (metagenomics) data."
   }
 },
@@ -217,6 +217,12 @@ In Claude Desktop, add the following to the claude_desktop_config.json file to c
 ## ⚙️ Create spoke-genelab Knowledge Graph (for developers)
 
 [Create KG](https://github.com/BaranziniLab/spoke_genelab/blob/main/docs/create_kg.md)
+
+------
+
+## 📝 Change Log
+
+[Change Log](https://github.com/BaranziniLab/spoke_genelab/blob/main/CHANGELOG.md)
 
 ------
 
