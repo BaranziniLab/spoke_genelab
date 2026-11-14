@@ -4,7 +4,9 @@
 
 1. Download the Neo4j dump file
 
-[![Download spoke-genelab-v0.3.1](https://img.shields.io/badge/Download-spoke--genelab--v0.3.1-brightgreen)](https://drive.google.com/file/d/1Wy-BqUhtmGk7qB8WpnG5LefDDsF_6xQW/view?usp=sharing)
+[![Download spoke-genelab-v0.3.1-20261112](https://img.shields.io/badge/Download-spoke--genelab--v0.3.1-brightgreen)](https://drive.google.com/file/d/1XMC_RnRqM7stvEN-KpSxtx39JygYF4qy/view?usp=drive_link)
+
+MD5 (spoke-genelab-v0.3.1-20261112.dump) = 71c35fde9719e72c89cbf4c2d4976f7f
 
 2. Launch Neo4j Desktop and start the `spoke-genelab` instance
 
