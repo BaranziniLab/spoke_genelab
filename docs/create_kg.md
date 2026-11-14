@@ -1,16 +1,19 @@
 ## ⚙️ Create spoke-genelab Knowledge Graph 
 
-**Needs to be updated for new Neo4j Desktop Version**
+### Prerequisites
+
+* Neo4j Desktop 2.x with a `spoke-genelab` instance and the APOC plugin, set up as described in [Neo4j Desktop Installation and Configuration](neo4j_installation.md).
+* Neo4j version 2026.09 or later for the instance. The full-text search examples in `5_import_to_neo4j.ipynb` use the Cypher 25 `SEARCH` clause, which is not available in earlier versions. The current release was built with Neo4j 2026.10.2.
+* Miniconda3 (light-weight, preferred) or Anaconda3 and Mamba (faster than Conda)
+
+    * Install [Miniconda3](https://docs.conda.io/en/latest/miniconda.html)
+    * Update an existing miniconda3 installation: ```conda update conda```
+    * Install Mamba: ```conda install mamba -n base -c conda-forge```
+    * Install Git (if not installed): ```conda install git -n base -c anaconda```
+
+------
 
 ### Setup the Environment
-
-Prerequisites: Miniconda3 (light-weight, preferred) or Anaconda3 and Mamba (faster than Conda)
-
-* Install [Miniconda3](https://docs.conda.io/en/latest/miniconda.html)
-* Update an existing miniconda3 installation: ```conda update conda```
-* Install Mamba: ```conda install mamba -n base -c conda-forge```
-* Install Git (if not installed): ```conda install git -n base -c anaconda```
-------
 
 1. Clone this Repository
 
@@ -42,9 +45,9 @@ Path to the cloned git repository
 
 `KG_GIT=/Users/.../spoke_genelab/`
 
-Path to the Neo4j instance in Neo4j Desktop. Make sure to enclose the path in quotes.
+Path to the Neo4j instance in Neo4j Desktop. The path is shown in the `Path` field of the `spoke-genelab` instance in Neo4j Desktop. Make sure to enclose the path in quotes.
 
-`NEO4J_INSTALL_PATH="/Users/.../Library/Application Support/Neo4j Desktop/Application/relate-data/dbmss/dbms-3d4b95d1-0219-480b-a3c4-ee5a409cc383"`
+`NEO4J_INSTALL_PATH="/Users/.../Library/Application Support/neo4j-desktop/Application/Data/dbmss/dbms-<instance ID>"`
 
 BioPortal API Key
 
@@ -54,10 +57,13 @@ BioPortal API Key
 
 ### Download and Process Datasets and upload to Neo4J Graph Database
 
-1. Start the spoke-genelab Graph DBMS
+1. Launch Neo4j Desktop and start the `spoke-genelab` instance
 
-![](start_dbms.png)
+<p align="center">
+  <img src="start_instance.png" width="600">
+</p>
 
+----
 2. Activate the conda environment
 
 ```
@@ -72,6 +78,7 @@ jupyter lab
 
 4. Navigate to the `notebooks` directory and run the following notebooks
 
+
 | Notebook                   |   Description           |
 |----------------------------|-------------------------|
 | 1_download_datasets.ipynb  | Downloads datasets     |
@@ -81,29 +88,27 @@ jupyter lab
 | 5_import_to_neo4j.ipynb    | Imports the formatted data into a Neo4j KG |
 | 6_query_examples.ipynb     | Runs example queries (optional) |
 
-5. When the import is completed, click the `Refresh` button in Neo4j Desktop. The newly created database `spoke-genelab-v0.3.1` will be listed.
+5. When the import is completed, click the refresh icon above the list of databases in Neo4j Desktop. The newly created database `spoke-genelab-v0.3.1` will be listed.
 
-![](db_imported.png)
+6. Select `Query` from the `Connect` menu
 
-6. Click the `Open` button to launch the database.
+<p align="center">
+  <img src="select_query.png" width="600">
+</p>
 
-![](open_dbms.png)
+7. Select the `spoke-genelab-v0.3.1` database. Wait for about 30+ seconds until the database is loaded and the nodes are listed as shown below.
 
-7. Click on the database icon on the left.
+<p align="center">
+  <img src="select_db.png" width="600">
+</p>
 
-![](select_db_icon.png)
+8. Set the Graph Stylesheet
 
-8. Use the pull-down menu to select a version of `spoke-genelab-v0.3.1` database. Wait for about 30+ seconds until the database is loaded and the nodes are listed as shown below.
-   
-![](db_ready.png)
+Drag the file kg/v0.3.1/style.grass onto the query window to set the node colors, sizes, and labels.
 
-9. Set the Graph Stylesheet
+9. Now you are ready to run Cypher queries on the selected database.
 
-Drag the file kg/v0.3.1/style.grass onto the Neo4j Browser window to set the node colors, sizes, and labels.
-
-10. Now you are ready to run Cypher queries on the selected database.
-
-11. When you are finished, stop the database in the Neo4j Desktop.
+10. When you are finished, stop the instance in Neo4j Desktop.
 
 To stop the conda environment, type
 
@@ -112,14 +117,17 @@ To stop the conda environment, type
 ------
 
 ### Dump Neo4J Graph Database
-1. Stop the database
 
-2. Hover the cursor over the `spoke-genelab-v0.3.1` database and select `Dump` from the menu.
+1. Stop the instance
 
-![](dump_db.png)
+> A database can only be exported from a stopped instance.
 
-3. When the dump is complete, click the `Reveal files in Finder` button to open the directory that contains the `spoke-genelab-v0.3.1.dump` file.
+<p align="center">
+  <img src="stop_instance.png" width="600">
+</p>
 
-![](dump_location.png)
+2. Select `Export database to .dump` from the `...` menu next to the `spoke-genelab-v0.3.1` database.
 
-This database dump will be used to create the SPOKE-GeneLab composite database.
+3. When the export is complete, locate the `spoke-genelab-v0.3.1.dump` file.
+
+This database dump is used to distribute the KG (see [Import spoke-genelab Knowledge Graph](import_db.md)) and to create the SPOKE-GeneLab composite database.
