@@ -3,6 +3,8 @@
 # Copy this file to .env and set the following variables according to your local installation.
 #
 KG_VERSION=v0.3.1
+DATE=YYYYMMDD # Update to current date
+
 # Path to the spoke_genelab repo
 KG_GIT=<absolute path to spoke_genelab repo>
 # Path to the Neo4J instance in Neo4j Desktop
@@ -16,7 +18,7 @@ BIOPORTAL_API_KEY=<bioportal api key>
 NEO4J_USE_SUDO=False
 NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=neo4jdemo
-NEO4J_DATABASE=spoke-genelab-${KG_VERSION}
+NEO4J_DATABASE=spoke-genelab-${KG_VERSION}-${DATE}
 NEO4J_HOME=${NEO4J_INSTALL_PATH}
 NEO4J_BIN=${NEO4J_HOME}/bin
 # KG metadata and data files
