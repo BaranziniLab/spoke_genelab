@@ -4,7 +4,7 @@
 
 1. Download the Neo4j dump file
 
-[![Download spoke-genelab-v0.3.1-20261112](https://img.shields.io/badge/Download-spoke--genelab--v0.3.1-brightgreen)](https://drive.google.com/file/d/1XMC_RnRqM7stvEN-KpSxtx39JygYF4qy/view?usp=drive_link)
+[![Download spoke-genelab-v0.3.1-20261112](https://img.shields.io/badge/Download-spoke--genelab--v0.3.1--20261112-brightgreen)](https://drive.google.com/file/d/1XMC_RnRqM7stvEN-KpSxtx39JygYF4qy/view?usp=drive_link)
 
 MD5 (spoke-genelab-v0.3.1-20261112.dump) = 71c35fde9719e72c89cbf4c2d4976f7f
 
@@ -20,7 +20,7 @@ MD5 (spoke-genelab-v0.3.1-20261112.dump) = 71c35fde9719e72c89cbf4c2d4976f7f
   <img src="create_db_menu.png" width="600">
 </p>
 
-4. Enter the exact database name, e.g., spoke-genelab-v0.3.1
+4. Enter the exact database name: `spoke-genelab-v0.3.1-20261112`
 
 <p align="center">
   <img src="create_db.png" width="400">

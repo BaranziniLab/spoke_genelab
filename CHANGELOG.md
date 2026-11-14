@@ -42,7 +42,11 @@ The graph schema is unchanged: the node and relationship metadata in `kg/v0.3.1/
 - **`docs/create_kg.md`**
   - Rewritten for Neo4j Desktop 2.x: the steps use the current terminology (instance, `Connect` > `Query`, `Export database to .dump`) and the Neo4j Desktop 2.x screenshots, and the example `NEO4J_INSTALL_PATH` uses the current folder layout.
   - Added a prerequisites section, including the minimum Neo4j version (2026.09) required by the full-text search examples in notebook 5.
+  - Added the `DATE` variable to the `.env` instructions and updated the database and dump file names to the dated form (`spoke-genelab-v0.3.1-20261112`).
   - Removed the instructions for `NEO4J_ADMIN_JAVA_OPTS`.
+- **`docs/import_db.md`** — The download link now points to the new dump file (`spoke-genelab-v0.3.1-20261112.dump`), its MD5 checksum was added, and the database name to enter was updated to `spoke-genelab-v0.3.1-20261112`.
+- **`README.md`** — The MCP-GeneLab configuration example now uses the database name `spoke-genelab-v0.3.1-20261112`. A link to the change log was added.
+- **`CHANGELOG.md`** — Added.
 - **`docs/methylation_gene_expression.png`** — Regenerated from the corrected query in notebook 6. It now shows the two OSD-48 genes that are hypermethylated in the promoter and downregulated (*Igfbp6* and *Pcdh19*).
 
 ### Notebooks
@@ -56,7 +60,7 @@ The graph schema is unchanged: the node and relationship metadata in `kg/v0.3.1/
 
 ### Unchanged
 
-`README.md`, `docs/import_db.md`, `docs/neo4j_installation.md`, `kg/v0.3.1/` (metadata and style sheet), `notebooks/neo4j_utils.py`, `notebooks/ontology_mapper.py`, `notebooks/utils.py`.
+`docs/neo4j_installation.md`, `kg/v0.3.1/` (metadata and style sheet), `notebooks/neo4j_utils.py`, `notebooks/ontology_mapper.py`, `notebooks/utils.py`.
 
 ---
 

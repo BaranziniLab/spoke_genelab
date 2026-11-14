@@ -41,6 +41,10 @@ KG version number
 
 `KG_VERSION=v0.3.1`
 
+Build date in the format `YYYYMMDD`. The date is appended to the database name, e.g., `spoke-genelab-v0.3.1-20261112`.
+
+`DATE=20261112`
+
 Path to the cloned git repository
 
 `KG_GIT=/Users/.../spoke_genelab/`
@@ -88,7 +92,7 @@ jupyter lab
 | 5_import_to_neo4j.ipynb    | Imports the formatted data into a Neo4j KG |
 | 6_query_examples.ipynb     | Runs example queries (optional) |
 
-5. When the import is completed, click the refresh icon above the list of databases in Neo4j Desktop. The newly created database `spoke-genelab-v0.3.1` will be listed.
+5. When the import is completed, click the refresh icon above the list of databases in Neo4j Desktop. The newly created database, e.g., `spoke-genelab-v0.3.1-20261112`, will be listed.
 
 6. Select `Query` from the `Connect` menu
 
@@ -96,7 +100,7 @@ jupyter lab
   <img src="select_query.png" width="600">
 </p>
 
-7. Select the `spoke-genelab-v0.3.1` database. Wait for about 30+ seconds until the database is loaded and the nodes are listed as shown below.
+7. Select the newly created database, e.g., `spoke-genelab-v0.3.1-20261112`. Wait for about 30+ seconds until the database is loaded and the nodes are listed as shown below.
 
 <p align="center">
   <img src="select_db.png" width="600">
@@ -126,8 +130,8 @@ To stop the conda environment, type
   <img src="stop_instance.png" width="600">
 </p>
 
-2. Select `Export database to .dump` from the `...` menu next to the `spoke-genelab-v0.3.1` database.
+2. Select `Export database to .dump` from the `...` menu next to the database, e.g., `spoke-genelab-v0.3.1-20261112`.
 
-3. When the export is complete, locate the `spoke-genelab-v0.3.1.dump` file.
+3. When the export is complete, locate the dump file, e.g., `spoke-genelab-v0.3.1-20261112.dump`.
 
 This database dump is used to distribute the KG (see [Import spoke-genelab Knowledge Graph](import_db.md)) and to create the SPOKE-GeneLab composite database.
