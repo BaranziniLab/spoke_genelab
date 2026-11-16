@@ -128,12 +128,13 @@ def quote_path(path):
 def dump_database(verbose=False):
     NEO4J_DATABASE = os.getenv("NEO4J_DATABASE")
     NEO4J_INSTALL_PATH = os.getenv("NEO4J_INSTALL_PATH")
-    neo4j_dump = os.path.join(NEO4J_INSTALL_PATH, version)
+    KG_VERSION = os.getenv("KG_VERSION")
+    neo4j_dump = os.path.join(NEO4J_INSTALL_PATH, KG_VERSION)
     NEO4J_BIN = os.getenv("NEO4J_BIN")
     neo4j_admin = quote_path(os.path.join(NEO4J_BIN, "neo4j-admin"))
 
     os.makedirs(neo4j_dump, exist_ok=True)
-    neo4j_dump = quote_path(eo4j_dump)
+    neo4j_dump = quote_path(neo4j_dump)
     command = f"{neo4j_admin} database dump {NEO4J_DATABASE} --to-path={neo4j_dump}"
 
     if verbose:

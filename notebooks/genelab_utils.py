@@ -229,7 +229,7 @@ def filter_by_gl_processed(metadata):
         }
     )
 
-    metdata = metadata[
+    metadata = metadata[
         (metadata["file.GL-processed"] != False)
         | (metadata["file.non-GL-processed"] != False)
     ]

@@ -2,7 +2,7 @@ name: spoke-genelab
 
 channels:
   - conda-forge
-  - anaconda
+  - bioconda
 
 dependencies:
   - python=3.10
@@ -19,7 +19,7 @@ dependencies:
   - papermill
   - monotonic=1.5
   - python-dotenv=1.0.0
-  - openjdk=23.0.2
+  - openjdk=25.0.2
   - ipycytoscape
   - inflection
   - pip
